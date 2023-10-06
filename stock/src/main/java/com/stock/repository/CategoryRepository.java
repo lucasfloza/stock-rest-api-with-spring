@@ -1,12 +1,12 @@
 package com.stock.repository;
 
-import com.stock.domain.Product;
+import com.stock.domain.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
     boolean existsByCode(String code);
 
-    Optional<Product> findByCode(String code);
+    Optional<Category> findByCode(String code);
 }

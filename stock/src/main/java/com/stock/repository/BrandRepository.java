@@ -1,12 +1,12 @@
 package com.stock.repository;
 
-import com.stock.domain.Product;
+import com.stock.domain.Brand;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface BrandRepository extends JpaRepository<Brand, Long> {
     boolean existsByCode(String code);
 
-    Optional<Product> findByCode(String code);
+    Optional<Brand> findByCode(String code);
 }
